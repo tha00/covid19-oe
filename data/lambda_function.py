@@ -3,7 +3,7 @@ import boto3
 import requests
 
 DATA_URL = os.environ.get("DATA_URL")
-FILE_NAME = os.environ.get("FILE_NAME")
+FILE_KEY = os.environ.get("FILE_KEY")
 BUCKET_NAME = os.environ.get("BUCKET_NAME")
 
 
@@ -19,8 +19,8 @@ def lambda_handler(event, context):
     print("[INFO] Request COVID-19 data...")
     data = fetch_data(DATA_URL)
 
-    print(f"[INFO] Saving Data {FILE_NAME} to S3 Bucket {BUCKET_NAME}...")
-    s3.Bucket(BUCKET_NAME).put_object(Key=FILE_NAME, Body=data)
+    print(f"[INFO] Saving Data {FILE_KEY} to S3 Bucket {BUCKET_NAME}...")
+    s3.Bucket(BUCKET_NAME).put_object(Key=FILE_KEY, Body=data)
 
     print(f"[INFO] Job done")
 

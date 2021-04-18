@@ -9,4 +9,5 @@ aws lambda create-function \
   --runtime python3.7 \
   --role arn:aws:iam::"$ACCOUNT_ID":role/"$ROLE_NAME" \
   --timeout 900 \
-  --environment "Variables={BUCKET_NAME=$BUCKET_NAME, FILE_NAME=${FILE_NAME}, DATA_URL=${DATA_URL}}"
+  --environment "Variables={BUCKET_NAME=$BUCKET_NAME, FILE_NAME=${FILE_NAME}, DATA_URL=${DATA_URL}}" \
+  --region "$REGION"
