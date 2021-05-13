@@ -27,6 +27,8 @@ under `./data`, run
 Under `./streamlit`, there is a Streamlit application loading and presenting the data. A small setup
 script to host the app on [AWS EC2](https://aws.amazon.com/ec2/) is also included.
 
+<p align="center"><img src="/streamlit/screenshot.png" alt="screenshot" width="700"></p> 
+
 ## Resources
 
 - [COVID-19 Austrian district data over time](https://www.data.gv.at/katalog/dataset/4b71eb3d-7d55-4967-b80d-91a3f220b60c)
